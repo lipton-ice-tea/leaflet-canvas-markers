@@ -1,7 +1,7 @@
 {
   "name": "leaflet-canvas-markers",
   "version": "1.0.0",
-  "description": "Leaflet-canvas-markers",
+  "description": "Leaflet plugin to display markers on canvas",
   "main": "leaflet-canvas-markers.js",
   "directories": {
     "doc": "docs",
@@ -15,9 +15,19 @@
     "url": "git+https://github.com/lipatoff/leaflet-canvas-markers.git"
   },
   "author": "Dmitrii Lipatov",
+  "keywords": [
+    "leaflet",
+    "leafletjs",
+    "leaflet-plugin",
+    "marker",
+    "canvas"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lipatoff/leaflet-canvas-markers/issues"
   },
-  "homepage": "https://github.com/lipatoff/leaflet-canvas-markers#readme"
+  "homepage": "https://github.com/lipatoff/leaflet-canvas-markers",
+  "peerDependencies": {
+    "leaflet": "^1.0.0"
+  }
 }
