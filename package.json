@@ -1,0 +1,23 @@
+{
+  "name": "leaflet-canvas-markers",
+  "version": "1.0.0",
+  "description": "Leaflet-canvas-markers",
+  "main": "leaflet-canvas-markers.js",
+  "directories": {
+    "doc": "docs",
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lipatoff/leaflet-canvas-markers.git"
+  },
+  "author": "Dmitrii Lipatov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lipatoff/leaflet-canvas-markers/issues"
+  },
+  "homepage": "https://github.com/lipatoff/leaflet-canvas-markers#readme"
+}
