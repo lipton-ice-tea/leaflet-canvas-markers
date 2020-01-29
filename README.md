@@ -1,5 +1,5 @@
 # Leaflet-canvas-markers
-
+Adding all images to the Canvas. And you can create a direction arrow just by pointing to the previous waypoint.
 > 一 A JavaScript Integrated [Leaflet](https://github.com/Leaflet/Leaflet) Map API
 ## Demo
 [Live Demo >>](https://lipatoff.github.io/leaflet-canvas-markers/)
