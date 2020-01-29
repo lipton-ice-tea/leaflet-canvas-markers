@@ -26,14 +26,16 @@
         },
     });
 
-    const angleCrds = (latlng, prevLatlng) => {
+    const getLatlng = obj => {
+        if (Array.isArray(obj)) return {lat: obj[0], lng: obj[1]};
+        return obj;
+    };
+
+    const angleCrds = (map, prevLatlng, latlng) => {
         if (!latlng || !prevLatlng) return 0;
-        const {lat, lng} = latlng;
-        const [lng2, lat2] = prevLatlng;
-        const x = Math.cos(lat2) * Math.sin(lat) - Math.sin(lat2) * Math.cos(lat) * Math.cos(lng2 - lng);
-        const y = Math.sin(lng2 - lng) * Math.cos(lat);
-        const brng = Math.atan2(y, x) * (180 / Math.PI);
-        return (brng + 360) % 360 + 90;
+        const pxStart = map.latLngToLayerPoint(getLatlng(prevLatlng));
+        const pxEnd = map.latLngToLayerPoint(getLatlng(latlng));
+        return Math.atan2(pxStart.y - pxEnd.y, pxStart.x - pxEnd.x) / Math.PI * 180 - 90;
     };
 
     const defaultImgOptions = {
@@ -47,7 +49,7 @@
             if (!this.options.img || !this.options.img.url) return;
             if (!this.options.img.el) {
                 this.options.img = {...defaultImgOptions, ...this.options.img};
-                this.options.img.rotate += angleCrds(this._latlng, this.options.prevLatlng);
+                this.options.img.rotate += angleCrds(this._map, this.options.prevLatlng, this._latlng);
                 const img = document.createElement('img');
                 img.src = this.options.img.url;
                 this.options.img.el = img;

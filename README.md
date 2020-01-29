@@ -8,7 +8,7 @@
 const map = L.map('map', {preferCanvas: true}).setView([51.505, -0.09], 13);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-L.canvasMarker([51.495, -0.06], {
+L.canvasMarker(L.latLng(51.495, -0.06), {
     radius: 20,
     img: {
         url: 'icon.png',    //image link
@@ -24,9 +24,9 @@ You can specify the previous point (prevLatlng: latlng). The picture will automa
 const map = L.map('map', {preferCanvas: true}).setView([51.505, -0.09], 13);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-L.canvasMarker([51.495, -0.06], {
+L.canvasMarker(L.latLng(51.495, -0.06), {
     radius: 20,
-    prevLatlng: [51.503, -0.09],    //previous point
+    prevLatlng: L.latLng(51.503, -0.09),    //previous point
     img: {
         url: 'arrow.png',
         size: [40, 40],
