@@ -1,12 +1,8 @@
 {
   "name": "leaflet-canvas-markers",
-  "version": "1.0.2",
-  "description": "Leaflet plugin to display markers on canvas",
+  "version": "1.0.3",
+  "description": "Leaflet plugin. Adding all images to one canvas, together with the base L.CircleMarker",
   "main": "leaflet-canvas-markers.js",
-  "directories": {
-    "doc": "docs",
-    "example": "example"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +16,8 @@
     "leafletjs",
     "leaflet-plugin",
     "marker",
-    "canvas"
+    "canvas",
+    "leaflet-canvas-markers"
   ],
   "license": "ISC",
   "bugs": {

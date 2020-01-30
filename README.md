@@ -1,6 +1,9 @@
-# Leaflet-canvas-markers
-Adding all images to the Canvas. And you can create a direction arrow just by pointing to the previous waypoint.
 > 一 A JavaScript Integrated [Leaflet](https://github.com/Leaflet/Leaflet) Map API
+
+# Leaflet-canvas-markers
+Adding all images to one canvas, together with the base L.CircleMarker!
+And you can create a direction arrow just by pointing to the previous waypoint.
+
 ## Demo
 [Live Demo >>](https://lipatoff.github.io/leaflet-canvas-markers/)
 ## Base Usage
@@ -34,3 +37,17 @@ L.canvasMarker(L.latLng(51.495, -0.06), {
     },
 }).addTo(map);
 ```
+
+## Options
+| Option | Type | Description |
+| --- | --- | --- |
+| `img` | `Object` | Image properties |
+| `prevLatlng` | `LatLng` | The coordinates of the previous point. If indicated - The image automatically shows the direction |
+
+## Options img
+| Option | Type | Default | Description |
+| --- | --- | --- | --- |
+| `url` | `String` |     | Image link |
+| `size` | `Array` | `[40, 40]` | Image size in map |
+| `rotate` | `Number` | `0` | Image rotate in map |
+| `offset` | `Object` | `{ x: 0, y: 0 }` | Image offset in Canvas |
