@@ -1,6 +1,6 @@
 {
   "name": "leaflet-canvas-markers",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Leaflet plugin. Adding all images to one canvas, together with the base L.CircleMarker",
   "main": "leaflet-canvas-markers.js",
   "scripts": {
