@@ -33,8 +33,8 @@
 
     const angleCrds = (map, prevLatlng, latlng) => {
         if (!latlng || !prevLatlng) return 0;
-        const pxStart = map.latLngToLayerPoint(getLatlng(prevLatlng));
-        const pxEnd = map.latLngToLayerPoint(getLatlng(latlng));
+        const pxStart = map.project(prevLatlng);
+        const pxEnd = map.project(latlng);
         return Math.atan2(pxStart.y - pxEnd.y, pxStart.x - pxEnd.x) / Math.PI * 180 - 90;
     };
 
