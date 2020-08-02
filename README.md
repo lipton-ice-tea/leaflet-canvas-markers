@@ -5,7 +5,7 @@ Adding all images to one canvas, together with the base L.CircleMarker!
 And you can create a direction arrow just by pointing to the previous waypoint.
 
 ## Demo
-[Live Demo >>](https://lipatoff.github.io/leaflet-canvas-markers/)
+[Live Demo >>](https://lipton-ice-tea.github.io/leaflet-canvas-markers/)
 ## Base Usage
 ```javascript
 const map = L.map('map', {preferCanvas: true}).setView([51.505, -0.09], 13);

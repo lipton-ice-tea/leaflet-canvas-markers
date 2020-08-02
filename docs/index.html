@@ -101,6 +101,7 @@
                 }).addTo(map);
                 break;
             case 'img':
+                const coordinatesPopup = '[' + point.coordinates.lat + ',' + point.coordinates.lng + ']';
                 L.canvasMarker(point.coordinates, {
                     radius: 20,
                     prevLatlng: point.prevLatlng,
@@ -109,7 +110,7 @@
                         size: point.imgSize,
                         rotate: point.imgRotate || 0,
                     },
-                }).addTo(map);
+                }).bindPopup(coordinatesPopup).addTo(map);
                 break;
         }
     });

@@ -26,11 +26,6 @@
         },
     });
 
-    const getLatlng = obj => {
-        if (Array.isArray(obj)) return {lat: obj[0], lng: obj[1]};
-        return obj;
-    };
-
     const angleCrds = (map, prevLatlng, latlng) => {
         if (!latlng || !prevLatlng) return 0;
         const pxStart = map.project(prevLatlng);
