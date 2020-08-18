@@ -39,11 +39,22 @@
         offset: { x: 0, y: 0 },
     };
 
+    const applyDefault = (defaultObj, value) => {
+        const newObj = {}
+        for (const key of Object.keys(defaultObj)) {
+            newObj[key] = defaultObj[key];
+        }
+        for (const key of Object.keys(value)) {
+            newObj[key] = value[key];
+        }
+        return newObj;
+    }
+
     const CanvasMarker = L.CircleMarker.extend({
         _updatePath() {
             if (!this.options.img || !this.options.img.url) return;
             if (!this.options.img.el) {
-                this.options.img = {...defaultImgOptions, ...this.options.img};
+                this.options.img = applyDefault(defaultImgOptions, this.options.img);
                 this.options.img.rotate += angleCrds(this._map, this.options.prevLatlng, this._latlng);
                 const img = document.createElement('img');
                 img.src = this.options.img.url;
