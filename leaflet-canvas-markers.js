@@ -60,7 +60,14 @@
         },
     });
 
-    L.canvasMarker = function (...options) {
-        return new CanvasMarker(...options);
+    L.canvasMarker = function (...opt) {
+        try {
+            const i = opt.findIndex(o => typeof o === 'object' && o.img);
+            if (i+1) {
+                if (!opt[i].radius && opt[i].img && opt[i].img.size) opt[i].radius = Math.ceil(Math.max(...opt[i].img.size)/2);
+                if (opt[i].pane) delete opt[i].pane;
+            }
+        } catch(e) {}
+        return new CanvasMarker(...opt);
     };
 }));

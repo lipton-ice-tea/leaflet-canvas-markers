@@ -1,6 +1,6 @@
 {
   "name": "leaflet-canvas-markers",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Adding all images to one canvas, together with the base L.CircleMarker! And you can create a direction arrow just by pointing to the previous waypoint.",
   "main": "leaflet-canvas-markers.js",
   "scripts": {

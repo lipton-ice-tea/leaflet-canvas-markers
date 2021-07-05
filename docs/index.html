@@ -75,7 +75,7 @@
             coordinates: L.latLng(51.495, -0.06),
             prevLatlng: L.latLng(51.503, -0.09),
             img: './images/arrow.svg',
-            imgSize: [40, 40],
+            imgSize: [50, 50],
             priority: 2,
         },
     ];
@@ -103,12 +103,12 @@
             case 'img':
                 const coordinatesPopup = '[' + point.coordinates.lat + ',' + point.coordinates.lng + ']';
                 L.canvasMarker(point.coordinates, {
-                    radius: 20,
                     prevLatlng: point.prevLatlng,
                     img: {
                         url: point.img,
                         size: point.imgSize,
                         rotate: point.imgRotate || 0,
+                        offset: point.offset || { x: 0, y: 0 },
                     },
                 }).bindPopup(coordinatesPopup).addTo(map);
                 break;
