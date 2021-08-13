@@ -39,7 +39,7 @@
         offset: { x: 0, y: 0 },
     };
 
-    const CanvasMarker = L.CircleMarker.extend({
+    L.CanvasMarker = L.CircleMarker.extend({
         _updatePath() {
             if (!this.options.img || !this.options.img.url) return;
             if (!this.options.img.el) {
@@ -68,6 +68,6 @@
                 if (opt[i].pane) delete opt[i].pane;
             }
         } catch(e) {}
-        return new CanvasMarker(...opt);
+        return new L.CanvasMarker(...opt);
     };
 }));
