@@ -45,19 +45,51 @@
             if (!this.options.img.el) {
                 this.options.img = {...defaultImgOptions, ...this.options.img};
                 this.options.img.rotate += angleCrds(this._map, this.options.prevLatlng, this._latlng);
-                const img = document.createElement('img');
-                img.src = this.options.img.url;
-                this.options.img.el = img;
-                img.onload = () => {
-                    this.redraw();
-                };
-                img.onerror = () => {
-                    this.options.img = null;
-                };
+                this._createAndLoadImg();
             } else {
                 this._renderer._updateImg(this);
             }
         },
+        _createAndLoadImg(updateImage) {
+            const img = document.createElement('img');
+            img.src = this.options.img.url;
+            this.options.img.el = img;
+            img.onload = () => {
+                if (updateImage) {
+                    this._renderer._updateImg(this);
+                } else {
+                    this.redraw();
+                }
+            };
+            img.onerror = () => {
+                this.options.img = null;
+            };
+        },
+        updateImg(options) {
+            // Check for the element. It should be set first
+            if (!this.options.img.el) {
+                return;
+            }
+
+            // Pull options from
+            const { url, size, rotate, offset } = options;
+
+            // Copy the new options onto the existing options
+            if (url) {
+                this.options.img.url = url;
+            }
+            if (size) {
+                this.options.img.size = size;
+            }
+            if (rotate) {
+                this.options.img.rotate = rotate;
+            }
+            if (offset) {
+                this.options.img.offset = rotate;
+            }
+
+            this._createAndLoadImg(true);
+        }
     });
 
     L.canvasMarker = function (...opt) {
