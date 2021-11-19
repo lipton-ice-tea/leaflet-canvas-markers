@@ -71,7 +71,7 @@
                 return;
             }
 
-            // Pull options from
+            // Check for options
             const { url, size, rotate, offset } = options;
 
             // Copy the new options onto the existing options
