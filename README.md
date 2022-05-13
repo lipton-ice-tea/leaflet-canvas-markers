@@ -13,6 +13,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 L.canvasMarker(L.latLng(51.495, -0.06), {
     radius: 20,
+    opacity: 1,
     img: {
         url: 'icon.png',    //image link
         size: [40, 40],     //image size ( default [40, 40] )
@@ -29,6 +30,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 L.canvasMarker(L.latLng(51.495, -0.06), {
     radius: 20,
+    opacity: 1,
     prevLatlng: L.latLng(51.503, -0.09),    //previous point
     img: {
         url: 'arrow.png',
@@ -43,6 +45,7 @@ L.canvasMarker(L.latLng(51.495, -0.06), {
 | --- | --- | --- |
 | `img` | `Object` | Image properties |
 | `prevLatlng` | `LatLng` | The coordinates of the previous point. If indicated - The image automatically shows the direction |
+| `opacity` | `Number` | The opacity of the marker |
 
 ## Options img
 | Option | Type | Default | Description |
