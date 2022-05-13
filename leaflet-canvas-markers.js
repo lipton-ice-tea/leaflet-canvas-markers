@@ -15,9 +15,7 @@
       const p = layer._point.round();
       p.x += img.offset.x;
       p.y += img.offset.y;
-      if (opacity) {
-        this._ctx.globalAlpha = opacity;
-      }
+      this._ctx.globalAlpha = opacity || 1;
       if (img.rotate) {
         this._ctx.save();
         this._ctx.translate(p.x, p.y);
