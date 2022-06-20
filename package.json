@@ -1,6 +1,6 @@
 {
-  "name": "leaflet-canvas-markers",
-  "version": "1.0.7",
+  "name": "canvasmarkers-leaflet",
+  "version": "1.0.2",
   "description": "Adding all images to one canvas, together with the base L.CircleMarker! And you can create a direction arrow just by pointing to the previous waypoint.",
   "main": "leaflet-canvas-markers.js",
   "scripts": {
@@ -8,23 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lipton-ice-tea/leaflet-canvas-markers.git"
+    "url": "git+https://github.com/thxmxx/leaflet-canvas-markers.git"
   },
-  "author": "Dmitrii Lipatov",
   "keywords": [
-    "leaflet",
-    "leafletjs",
-    "leaflet-plugin",
-    "marker",
     "canvas",
-    "leaflet-canvas-markers"
+    "marker",
+    "leaflet",
+    "opacity"
   ],
+  "author": "Lucas Thom",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lipton-ice-tea/leaflet-canvas-markers/issues"
+    "url": "https://github.com/thxmxx/leaflet-canvas-markers/issues"
   },
-  "homepage": "https://github.com/lipton-ice-tea/leaflet-canvas-markers",
-  "peerDependencies": {
-    "leaflet": "^1.0.0"
-  }
+  "homepage": "https://github.com/thxmxx/leaflet-canvas-markers#readme"
 }
